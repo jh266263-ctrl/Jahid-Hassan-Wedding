@@ -1,0 +1,185 @@
+/* ========================================================
+   Action Buttons & Interactive Controls (Stage E)
+   ======================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  min-height: 48px;
+  min-width: 44px;
+  transition: all var(--duration-fast) var(--ease-natural);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-muted-gold);
+  outline-offset: 3px;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) ease;
+}
+
+/* Primary Action: Get Directions */
+.btn-primary {
+  background: linear-gradient(135deg, #493A36 0%, #362926 100%);
+  color: var(--color-warm-ivory);
+  border-color: #362926;
+  box-shadow: 0 6px 18px rgba(73, 58, 54, 0.22);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5A4742 0%, #433330 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(73, 58, 54, 0.28);
+  color: #FFF;
+}
+
+.btn-primary:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Secondary Action: Add to Calendar */
+.btn-secondary {
+  background: #FFF;
+  color: var(--color-deep-brown);
+  border: 1px solid var(--color-muted-gold);
+  box-shadow: 0 4px 14px rgba(199, 166, 106, 0.15);
+}
+
+.btn-secondary:hover {
+  background: var(--color-warm-ivory-light);
+  border-color: var(--color-muted-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(199, 166, 106, 0.25);
+}
+
+/* Replay Action */
+.btn-replay {
+  background: rgba(244, 216, 220, 0.35);
+  color: var(--color-dusty-rose-dark);
+  border: 1px solid var(--color-dusty-rose);
+  padding: 0.7rem 1.4rem;
+  font-size: 0.875rem;
+}
+
+.btn-replay:hover {
+  background: rgba(244, 216, 220, 0.65);
+  color: #8C404B;
+  transform: translateY(-1px);
+}
+
+.btn-replay:hover svg {
+  transform: rotate(-45deg);
+}
+
+/* Calendar Modal / Dropdown Options */
+.calendar-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.calendar-menu {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: #FFF;
+  border: 1px solid rgba(199, 166, 106, 0.35);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 0.5rem;
+  min-width: 200px;
+  z-index: 100;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.calendar-menu.is-active {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.calendar-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: none;
+  color: var(--color-deep-brown);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  transition: background var(--duration-fast) ease;
+}
+
+.calendar-option-btn:hover {
+  background: var(--color-warm-ivory);
+  color: var(--color-dusty-rose-dark);
+}
+
+.calendar-option-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-muted-gold-dark);
+}
+
+/* Feedback Toast Notification */
+.action-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-deep-brown);
+  color: var(--color-warm-ivory);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-soft);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.action-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.action-toast svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-muted-gold-light);
+}

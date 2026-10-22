@@ -1,0 +1,240 @@
+/* Modern Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-warm-ivory);
+  color: var(--color-deep-brown);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(244, 216, 220, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(201, 216, 193, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(199, 166, 106, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.8) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Accessibility: Skip to Content */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-deep-brown);
+  color: var(--color-warm-ivory);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top var(--duration-fast);
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Background Ambient Orbs (Subtle, low performance impact) */
+.ambient-glow {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.ambient-glow-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(244, 216, 220, 0.6) 0%, rgba(244, 216, 220, 0) 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.ambient-glow-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 216, 193, 0.5) 0%, rgba(201, 216, 193, 0) 70%);
+  top: 20%;
+  right: -150px;
+}
+
+.ambient-glow-3 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(199, 166, 106, 0.25) 0%, rgba(199, 166, 106, 0) 70%);
+  bottom: 5%;
+  left: 10%;
+}
+
+/* Petals Canvas Overlay */
+#petals-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Top App Header */
+.app-header {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-monogram {
+  font-family: var(--font-serif-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--color-deep-brown);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.brand-monogram .amp {
+  font-family: var(--font-script);
+  font-size: 1.4rem;
+  color: var(--color-muted-gold-dark);
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Music Control Button */
+.btn-music-toggle {
+  background: rgba(255, 252, 247, 0.85);
+  border: var(--border-gold-thin);
+  backdrop-filter: blur(8px);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-deep-brown);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-natural);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-music-toggle:hover {
+  background: #FFF;
+  border-color: var(--color-muted-gold);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-music-toggle:focus-visible {
+  outline: 2px solid var(--color-muted-gold);
+  outline-offset: 2px;
+}
+
+.btn-music-toggle .music-icon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--color-muted-gold-dark);
+  transition: transform var(--duration-normal) ease;
+}
+
+.btn-music-toggle.is-playing .music-icon {
+  animation: notePulse 1.8s infinite ease-in-out;
+}
+
+@keyframes notePulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(5deg); }
+}
+
+/* Main Container Layout */
+.app-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 960px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif-display);
+}
+
+.font-heading {
+  font-family: var(--font-serif-heading);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Footer */
+.app-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: var(--color-deep-brown-muted);
+  font-size: 0.85rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-ornament {
+  margin: 0 auto 0.75rem;
+  width: 36px;
+  height: 16px;
+  opacity: 0.6;
+}
+
+.footer-blessing {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-dusty-rose-dark);
+  margin-bottom: 0.4rem;
+}

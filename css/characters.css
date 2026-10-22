@@ -1,0 +1,227 @@
+/* ========================================================
+   Cute Chibi Couple Illustrations & Micro-Animations
+   (Stage C - Focal Point)
+   ======================================================== */
+
+.couple-svg-container {
+  width: 250px;
+  height: 250px;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(73, 58, 54, 0.12));
+  cursor: pointer;
+  transform-origin: center bottom;
+  transition: transform var(--duration-normal) var(--ease-bounce-soft);
+}
+
+.couple-svg-container:hover {
+  transform: scale(1.03);
+}
+
+/* Base Idle Breathing / Bounce for Couple */
+.character-couple {
+  transform-origin: 125px 230px;
+  animation: coupleIdleFloat 4s infinite ease-in-out;
+}
+
+@keyframes coupleIdleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Individual Bride Dynamics */
+.bride-group {
+  transform-origin: 165px 180px;
+  animation: brideSubtleSway 5s infinite ease-in-out;
+}
+
+@keyframes brideSubtleSway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1deg) translateY(-2px);
+  }
+}
+
+/* Bride's Dupatta Sway */
+.bride-dupatta {
+  transform-origin: 160px 100px;
+  animation: dupattaFlutter 3.6s infinite ease-in-out;
+}
+
+@keyframes dupattaFlutter {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  50% {
+    transform: rotate(2.5deg) skewX(1.5deg);
+  }
+}
+
+/* Individual Groom Dynamics */
+.groom-group {
+  transform-origin: 85px 180px;
+  animation: groomSubtleSway 4.6s infinite ease-in-out;
+}
+
+@keyframes groomSubtleSway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1.2deg) translateY(-1.5px);
+  }
+}
+
+/* Groom Head Tilt Greeting */
+.groom-head {
+  transform-origin: 85px 135px;
+  animation: groomHeadGreeting 6s infinite ease-in-out;
+}
+
+@keyframes groomHeadGreeting {
+  0%, 75%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+/* Independent Natural Blinking Animations */
+/* Bride Blinking (every 3.8s) */
+.bride-eyelid {
+  transform-origin: 165px 125px;
+  animation: brideBlink 3.8s infinite ease-in-out;
+}
+
+@keyframes brideBlink {
+  0%, 94%, 98%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  96% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* Groom Blinking (every 4.5s - staggered for realism) */
+.groom-eyelid {
+  transform-origin: 85px 125px;
+  animation: groomBlink 4.5s infinite ease-in-out;
+}
+
+@keyframes groomBlink {
+  0%, 93%, 97%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* Bouquet Gentle Movement */
+.bride-bouquet {
+  transform-origin: 155px 185px;
+  animation: bouquetFloat 3.8s infinite ease-in-out;
+}
+
+@keyframes bouquetFloat {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1.5deg) translateY(-1px);
+  }
+}
+
+/* Floating Hearts around Couple */
+.floating-heart {
+  opacity: 0;
+  transform-origin: center bottom;
+  animation: floatHeartRise 3.5s infinite ease-out;
+}
+
+.heart-1 {
+  animation-delay: 0.5s;
+}
+
+.heart-2 {
+  animation-delay: 2s;
+}
+
+.heart-3 {
+  animation-delay: 1.2s;
+}
+
+@keyframes floatHeartRise {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(sin(1) * 8px), -36px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Interactive Easter Egg: Happy Eyes on Hover/Click */
+.couple-svg-container:hover .bride-cheeks,
+.couple-svg-container:hover .groom-cheeks {
+  fill: #F48B9B !important;
+  transition: fill 0.3s ease;
+}
+
+.couple-svg-container.is-happy .bride-eye-open,
+.couple-svg-container.is-happy .groom-eye-open {
+  display: none;
+}
+
+.couple-svg-container.is-happy .bride-eye-happy,
+.couple-svg-container.is-happy .groom-eye-happy {
+  display: block !important;
+}
+
+.bride-eye-happy,
+.groom-eye-happy {
+  display: none;
+}
+
+/* Little tooltip hint on couple */
+.couple-love-tag {
+  position: absolute;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-blush-pink-deep);
+  color: var(--color-dusty-rose-dark);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-family: var(--font-script);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-subtle);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: all var(--duration-fast) var(--ease-natural);
+  z-index: 10;
+}
+
+.window-couple-wrapper:hover .couple-love-tag {
+  opacity: 1;
+  transform: translateY(0);
+}

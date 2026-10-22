@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation â€” Jahid Hasan &amp; Fahmida Sultana</title>
+  <meta name="description" content="Wedding ceremony of Jahid Hasan &amp; Fahmida Sultana on Friday, 30 October 2026 at BB Convention Hall Chittagong.">
+  <meta name="theme-color" content="#FFF8F0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/characters.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#wedding-invitation-content" class="skip-link">Skip to wedding invitation content</a>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
+
+  <!-- Falling Rose Petals & Floating Hearts Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Minimal Header -->
+  <header class="app-header">
+    <div class="header-brand">
+      <span class="brand-monogram">J <span class="amp">&amp;</span> F</span>
+    </div>
+    <div class="header-controls">
+      <button id="btn-music-toggle" class="btn-music-toggle" type="button" aria-pressed="false" title="Toggle romantic background music">
+        <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"></path>
+          <circle cx="6" cy="18" r="3"></circle>
+          <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <span id="music-status-text">Music: Off</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Experience Wrapper -->
+  <main class="app-container">
+    
+    <!-- STAGE A & B: The Interactive Window Scene (Matching Panel 1 & 2) -->
+    <section id="window-scene" class="window-scene-wrapper is-revealed" aria-label="Interactive Wedding Window Scene">
+      
+      <div class="window-stage-container">
+        <!-- Hanging Lantern Left -->
+        <div class="lantern-wrapper lantern-left" aria-hidden="true">
+          <div class="lantern-glow"></div>
+          <svg class="lantern-svg" viewBox="0 0 60 140" fill="none">
+            <defs>
+              <radialGradient id="lanternFlameLeft" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFDF0"/>
+                <stop offset="35%" stop-color="#FFDA66"/>
+                <stop offset="70%" stop-color="#FF9900" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#FF9900" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <line x1="30" y1="0" x2="30" y2="28" stroke="#A68444" stroke-width="2" stroke-dasharray="4 2"/>
+            <circle cx="30" cy="30" r="3.5" stroke="#C7A66A" stroke-width="2" fill="none"/>
+            <path d="M22 34 L38 34 L43 46 L17 46 Z" fill="#8B6E38" stroke="#C7A66A" stroke-width="1.5"/>
+            <path d="M17 46 L43 46 L39 92 L21 92 Z" fill="rgba(255, 235, 170, 0.45)" stroke="#695126" stroke-width="2"/>
+            <circle cx="30" cy="68" r="16" fill="url(#lanternFlameLeft)"/>
+            <ellipse cx="30" cy="68" rx="4" ry="9" fill="#FFFFFF"/>
+            <line x1="30" y1="46" x2="30" y2="92" stroke="#695126" stroke-width="1.5"/>
+            <line x1="19" y1="69" x2="41" y2="69" stroke="#695126" stroke-width="1" stroke-dasharray="2 2"/>
+            <path d="M21 92 L39 92 L35 100 L25 100 Z" fill="#8B6E38" stroke="#C7A66A" stroke-width="1.5"/>
+            <circle cx="30" cy="104" r="3" fill="#C7A66A"/>
+          </svg>
+        </div>
+
+        <!-- The Architectural Window Frame -->
+        <div 
+          id="interactive-window" 
+          class="interactive-window-container is-open" 
+          role="button" 
+          tabindex="0" 
+          aria-label="Interactive wedding window. Activate to open invitation and reveal the couple."
+          aria-expanded="true"
+        >
+          <!-- Floral Garland Archway on top of window -->
+          <svg class="window-garland" viewBox="0 0 360 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M30 75 C70 45, 120 20, 180 18 C240 20, 290 45, 330 75" stroke="#7B9672" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M45 65 C90 35, 135 15, 180 14 C225 15, 270 35, 315 65" stroke="#A8C2A0" stroke-width="2" fill="none"/>
+            <g fill="#7B9672">
+              <ellipse cx="65" cy="58" rx="14" ry="7" transform="rotate(-30 65 58)"/>
+              <ellipse cx="95" cy="42" rx="15" ry="8" transform="rotate(-20 95 42)"/>
+              <ellipse cx="130" cy="28" rx="16" ry="8" transform="rotate(-10 130 28)"/>
+              <ellipse cx="160" cy="20" rx="15" ry="8" transform="rotate(-5 160 20)"/>
+              <ellipse cx="200" cy="20" rx="15" ry="8" transform="rotate(5 200 20)"/>
+              <ellipse cx="230" cy="28" rx="16" ry="8" transform="rotate(10 230 28)"/>
+              <ellipse cx="265" cy="42" rx="15" ry="8" transform="rotate(20 265 42)"/>
+              <ellipse cx="295" cy="58" rx="14" ry="7" transform="rotate(30 295 58)"/>
+            </g>
+            <!-- Garden Roses (Peach-Pink) -->
+            <g transform="translate(100, 38)">
+              <circle cx="0" cy="0" r="10" fill="#F8DFE3"/>
+              <circle cx="-2" cy="-2" r="6" fill="#ECA9B3"/>
+              <circle cx="0" cy="0" r="3" fill="#B5616D"/>
+            </g>
+            <g transform="translate(180, 16)">
+              <circle cx="0" cy="0" r="14" fill="#F8DFE3"/>
+              <circle cx="-3" cy="-3" r="9" fill="#ECA9B3"/>
+              <circle cx="1" cy="1" r="5" fill="#B5616D"/>
+              <circle cx="0" cy="0" r="2.5" fill="#C7A66A"/>
+            </g>
+            <g transform="translate(260, 38)">
+              <circle cx="0" cy="0" r="10" fill="#F8DFE3"/>
+              <circle cx="2" cy="-2" r="6" fill="#ECA9B3"/>
+              <circle cx="0" cy="0" r="3" fill="#B5616D"/>
+            </g>
+          </svg>
+
+          <!-- Outer Arch Frame -->
+          <div class="window-outer-arch">
+            
+            <!-- Inner Niche with Revealed Couple Artwork -->
+            <div class="window-interior">
+              <img 
+                id="chibi-couple-img" 
+                src="assets/couple_window_full.png" 
+                alt="Cute chibi cartoon bride Fahmida and groom Jahid smiling at the floral window" 
+                class="couple-reveal-view"
+                title="Tap us for a sweet smile!"
+              >
+
+              <!-- Blinking & Heart Overlay -->
+              <div class="couple-blink-overlay" aria-hidden="true">
+                <div class="blink-eye groom-eye-left"></div>
+                <div class="blink-eye groom-eye-right"></div>
+                <div class="blink-eye bride-eye-left"></div>
+                <div class="blink-eye bride-eye-right"></div>
+              </div>
+
+              <svg class="couple-heart-float" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+
+              <!-- Curtains Layer -->
+              <div class="curtains-layer" aria-hidden="true">
+                <svg class="curtain curtain-left" viewBox="0 0 160 420" preserveAspectRatio="none">
+                  <path d="M0 0 L160 0 C130 120 110 240 140 420 L0 420 Z" fill="rgba(248, 223, 227, 0.95)"/>
+                  <path d="M30 0 C15 120 40 280 20 420" stroke="rgba(199, 166, 106, 0.4)" stroke-width="1.5" fill="none"/>
+                  <path d="M80 0 C60 140 90 280 70 420" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" fill="none"/>
+                </svg>
+                <svg class="curtain curtain-right" viewBox="0 0 160 420" preserveAspectRatio="none">
+                  <path d="M160 0 L0 0 C30 120 50 240 20 420 L160 420 Z" fill="rgba(248, 223, 227, 0.95)"/>
+                  <path d="M130 0 C145 120 120 280 140 420" stroke="rgba(199, 166, 106, 0.4)" stroke-width="1.5" fill="none"/>
+                  <path d="M80 0 C100 140 70 280 90 420" stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+
+            </div>
+
+            <!-- 3D Louvered Wooden Shutters -->
+            <div class="shutters-wrapper" aria-hidden="true">
+              <!-- Left Shutter -->
+              <div class="shutter shutter-left">
+                <div class="shutter-face shutter-front">
+                  <div class="shutter-louvers"></div>
+                  <div class="shutter-handle-bar"></div>
+                </div>
+                <div class="shutter-face shutter-back"></div>
+              </div>
+
+              <!-- Right Shutter -->
+              <div class="shutter shutter-right">
+                <div class="shutter-face shutter-front">
+                  <div class="shutter-louvers"></div>
+                  <div class="shutter-handle-bar"></div>
+                </div>
+                <div class="shutter-face shutter-back"></div>
+              </div>
+            </div>
+
+            <!-- Window Sill -->
+            <div class="window-sill"></div>
+
+          </div>
+        </div>
+
+        <!-- Hanging Lantern Right -->
+        <div class="lantern-wrapper lantern-right" aria-hidden="true">
+          <div class="lantern-glow"></div>
+          <svg class="lantern-svg" viewBox="0 0 60 140" fill="none">
+            <defs>
+              <radialGradient id="lanternFlameRight" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFDF0"/>
+                <stop offset="35%" stop-color="#FFDA66"/>
+                <stop offset="70%" stop-color="#FF9900" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#FF9900" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <line x1="30" y1="0" x2="30" y2="28" stroke="#A68444" stroke-width="2" stroke-dasharray="4 2"/>
+            <circle cx="30" cy="30" r="3.5" stroke="#C7A66A" stroke-width="2" fill="none"/>
+            <path d="M22 34 L38 34 L43 46 L17 46 Z" fill="#8B6E38" stroke="#C7A66A" stroke-width="1.5"/>
+            <path d="M17 46 L43 46 L39 92 L21 92 Z" fill="rgba(255, 235, 170, 0.45)" stroke="#695126" stroke-width="2"/>
+            <circle cx="30" cy="68" r="16" fill="url(#lanternFlameRight)"/>
+            <ellipse cx="30" cy="68" rx="4" ry="9" fill="#FFFFFF"/>
+            <line x1="30" y1="46" x2="30" y2="92" stroke="#695126" stroke-width="1.5"/>
+            <line x1="19" y1="69" x2="41" y2="69" stroke="#695126" stroke-width="1" stroke-dasharray="2 2"/>
+            <path d="M21 92 L39 92 L35 100 L25 100 Z" fill="#8B6E38" stroke="#C7A66A" stroke-width="1.5"/>
+            <circle cx="30" cy="104" r="3" fill="#C7A66A"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Stage A Prompt & Button (Matching Panel 1) -->
+      <div class="window-prompt-container" id="window-prompt">
+        <p class="window-subheading">A little invitation awaits you...</p>
+        <button id="btn-open-invitation" class="btn-open-invitation" type="button">
+          <span>Open Invitation</span>
+          <span class="btn-open-arrow">&rarr;</span>
+        </button>
+        <!-- Gold Filigree Ornament Below Button -->
+        <div class="flourish-below-button" aria-hidden="true">
+          <span class="flourish-line"></span>
+          <svg class="flourish-icon" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+          <span class="flourish-line"></span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- STAGE D & E: Refined Wedding Invitation Card (Matching Panels 5, 6, 7, 8, 9) -->
+    <section id="invitation-card-container" class="invitation-card-container is-visible" aria-label="Wedding Invitation Details">
+      
+      <article class="invitation-card" id="wedding-invitation-content">
+        <!-- Inset Double Gold Border -->
+        <div class="card-inner-frame" aria-hidden="true"></div>
+
+        <!-- Corner Floral SVG Ornaments -->
+        <svg class="card-corner-floral floral-tl" viewBox="0 0 90 90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.9">
+            <path d="M5 85 C5 45, 45 5, 85 5" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M5 75 C5 40, 40 5, 75 5" stroke="#A8C2A0" stroke-width="1" fill="none"/>
+            <ellipse cx="18" cy="68" rx="12" ry="6" transform="rotate(-45 18 68)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="30" cy="52" rx="13" ry="6" transform="rotate(-38 30 52)" fill="#7B9672" opacity="0.8"/>
+            <ellipse cx="46" cy="36" rx="14" ry="6" transform="rotate(-30 46 36)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="62" cy="22" rx="12" ry="5" transform="rotate(-20 62 22)" fill="#7B9672" opacity="0.8"/>
+            <circle cx="22" cy="60" r="9" fill="#F8DFE3"/>
+            <circle cx="20" cy="58" r="5.5" fill="#ECA9B3"/>
+            <circle cx="22" cy="60" r="2.5" fill="#B5616D"/>
+            <circle cx="48" cy="32" r="10" fill="#F8DFE3"/>
+            <circle cx="46" cy="30" r="6" fill="#ECA9B3"/>
+            <circle cx="48" cy="32" r="3" fill="#B5616D"/>
+            <circle cx="48" cy="32" r="1.2" fill="#C7A66A"/>
+            <path d="M18 72 C12 75, 8 80, 6 86" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M72 6 C78 12, 82 18, 84 24" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <svg class="card-corner-floral floral-tr" viewBox="0 0 90 90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="transform: scaleX(-1)">
+          <g opacity="0.9">
+            <path d="M5 85 C5 45, 45 5, 85 5" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M5 75 C5 40, 40 5, 75 5" stroke="#A8C2A0" stroke-width="1" fill="none"/>
+            <ellipse cx="18" cy="68" rx="12" ry="6" transform="rotate(-45 18 68)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="30" cy="52" rx="13" ry="6" transform="rotate(-38 30 52)" fill="#7B9672" opacity="0.8"/>
+            <ellipse cx="46" cy="36" rx="14" ry="6" transform="rotate(-30 46 36)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="62" cy="22" rx="12" ry="5" transform="rotate(-20 62 22)" fill="#7B9672" opacity="0.8"/>
+            <circle cx="22" cy="60" r="9" fill="#F8DFE3"/>
+            <circle cx="20" cy="58" r="5.5" fill="#ECA9B3"/>
+            <circle cx="22" cy="60" r="2.5" fill="#B5616D"/>
+            <circle cx="48" cy="32" r="10" fill="#F8DFE3"/>
+            <circle cx="46" cy="30" r="6" fill="#ECA9B3"/>
+            <circle cx="48" cy="32" r="3" fill="#B5616D"/>
+            <circle cx="48" cy="32" r="1.2" fill="#C7A66A"/>
+          </g>
+        </svg>
+        <svg class="card-corner-floral floral-bl" viewBox="0 0 100 110" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="transform: scaleY(-1)">
+          <g opacity="0.9">
+            <path d="M5 105 C5 55, 50 5, 95 5" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="20" cy="88" rx="14" ry="6" transform="rotate(-50 20 88)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="36" cy="68" rx="15" ry="6.5" transform="rotate(-40 36 68)" fill="#7B9672" opacity="0.8"/>
+            <ellipse cx="58" cy="44" rx="15" ry="6" transform="rotate(-28 58 44)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="76" cy="24" rx="12" ry="5" transform="rotate(-15 76 24)" fill="#7B9672" opacity="0.8"/>
+            <circle cx="24" cy="78" r="11" fill="#F8DFE3"/>
+            <circle cx="22" cy="76" r="7" fill="#ECA9B3"/>
+            <circle cx="24" cy="78" r="3.5" fill="#B5616D"/>
+            <circle cx="24" cy="78" r="1.5" fill="#C7A66A"/>
+            <circle cx="58" cy="38" r="12" fill="#FDEEF0"/>
+            <circle cx="56" cy="36" r="7.5" fill="#F4C8CF"/>
+            <circle cx="58" cy="38" r="4" fill="#C77D87"/>
+          </g>
+        </svg>
+        <svg class="card-corner-floral floral-br" viewBox="0 0 100 110" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" style="transform: scale(-1,-1)">
+          <g opacity="0.9">
+            <path d="M5 105 C5 55, 50 5, 95 5" stroke="#8DA885" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="20" cy="88" rx="14" ry="6" transform="rotate(-50 20 88)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="36" cy="68" rx="15" ry="6.5" transform="rotate(-40 36 68)" fill="#7B9672" opacity="0.8"/>
+            <ellipse cx="58" cy="44" rx="15" ry="6" transform="rotate(-28 58 44)" fill="#8DA885" opacity="0.85"/>
+            <ellipse cx="76" cy="24" rx="12" ry="5" transform="rotate(-15 76 24)" fill="#7B9672" opacity="0.8"/>
+            <circle cx="24" cy="78" r="11" fill="#F8DFE3"/>
+            <circle cx="22" cy="76" r="7" fill="#ECA9B3"/>
+            <circle cx="24" cy="78" r="3.5" fill="#B5616D"/>
+            <circle cx="24" cy="78" r="1.5" fill="#C7A66A"/>
+            <circle cx="58" cy="38" r="12" fill="#FDEEF0"/>
+            <circle cx="56" cy="36" r="7.5" fill="#F4C8CF"/>
+            <circle cx="58" cy="38" r="4" fill="#C77D87"/>
+          </g>
+        </svg>
+
+        <!-- 1. Islamic Opening (Matching Panel 6) -->
+        <header class="card-bismillah-section">
+          <!-- Beautiful SVG Bismillah Calligraphy -->
+          <svg class="bismillah-svg" viewBox="0 0 360 80" aria-label="Bismillah-ir-Rahman-ir-Rahim" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left side floral scroll -->
+            <path d="M10 40 C22 24, 38 16, 56 18 C48 26, 40 34, 38 44 C36 54, 44 60, 54 58" 
+                  stroke="#A68444" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <circle cx="54" cy="58" r="3" fill="#C7A66A" opacity="0.85"/>
+            <circle cx="18" cy="28" r="5" fill="#F8DFE3" opacity="0.9"/>
+            <circle cx="16" cy="26" r="3" fill="#ECA9B3"/>
+            <circle cx="18" cy="28" r="1.5" fill="#B5616D"/>
+            <!-- Right side floral scroll (mirrored) -->
+            <path d="M350 40 C338 24, 322 16, 304 18 C312 26, 320 34, 322 44 C324 54, 316 60, 306 58" 
+                  stroke="#A68444" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <circle cx="306" cy="58" r="3" fill="#C7A66A" opacity="0.85"/>
+            <circle cx="342" cy="28" r="5" fill="#F8DFE3" opacity="0.9"/>
+            <circle cx="344" cy="26" r="3" fill="#ECA9B3"/>
+            <circle cx="342" cy="28" r="1.5" fill="#B5616D"/>
+            <!-- Gold lines -->
+            <line x1="70" y1="40" x2="290" y2="40" stroke="rgba(199,166,106,0.25)" stroke-width="1"/>
+            <!-- Transliteration -->
+            <text x="180" y="26" text-anchor="middle" 
+                  font-family="'Cormorant Garamond', Georgia, serif"
+                  font-style="italic" font-size="10.5" 
+                  fill="#A68444" letter-spacing="2.5">BISMILLAH-IR-RAHMAN-IR-RAHIM</text>
+            <!-- Main text -->
+            <text x="180" y="50" text-anchor="middle" 
+                  font-family="'Cormorant Garamond', Georgia, serif"
+                  font-style="italic" font-size="16" font-weight="600"
+                  fill="#4A352F" letter-spacing="0.5">In the Name of Almighty Allah</text>
+            <!-- Bottom decorative line with diamond -->
+            <line x1="95" y1="62" x2="172" y2="62" stroke="#C7A66A" stroke-width="0.8" opacity="0.6"/>
+            <rect x="178" y="59" width="4" height="4" fill="#C7A66A" transform="rotate(45 180 61)" opacity="0.75"/>
+            <line x1="188" y1="62" x2="265" y2="62" stroke="#C7A66A" stroke-width="0.8" opacity="0.6"/>
+          </svg>
+          <p class="bismillah-translation">
+            The Most Beneficent &amp; The Most Merciful
+          </p>
+        </header>
+
+        <!-- 2. Invitation Invocation (Matching Panel 6) -->
+        <div class="card-invitation-message">
+          <p class="blessings-line">With the blessings of Almighty Allah,</p>
+          <h2 class="host-name">Ayesha Begum</h2>
+          <p class="host-request">
+            requests the pleasure of your company at the wedding ceremony<br>
+            of her beloved son
+          </p>
+        </div>
+
+        <!-- 3. Couple Names (Matching Panel 6) -->
+        <div class="card-couple-section">
+          <!-- Gold Filigree Top Divider -->
+          <div class="card-divider-flourish" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="divider-ornament" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <span class="divider-line"></span>
+          </div>
+
+          <div class="couple-names-wrapper">
+            <h1 class="couple-name">Jahid Hasan</h1>
+            <span class="couple-ampersand" aria-label="and">&amp;</span>
+            <h1 class="couple-name">Fahmida Sultana</h1>
+          </div>
+
+          <!-- Gold Filigree Bottom Divider -->
+          <div class="card-divider-flourish" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="divider-ornament" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <!-- 4. Families Details (Matching Panel 7) -->
+        <div class="card-families-grid">
+          <!-- Groom's Family -->
+          <div class="family-column">
+            <h3 class="family-role-title">Groom's Family</h3>
+            <p class="family-member">
+              <span class="label">Father:</span>
+              <span class="name">Late Abdul Jalil</span>
+            </p>
+            <p class="family-member">
+              <span class="label">Mother:</span>
+              <span class="name">Ayesha Begum</span>
+            </p>
+          </div>
+
+          <!-- Bride's Family -->
+          <div class="family-column">
+            <h3 class="family-role-title">Bride's Family</h3>
+            <p class="family-member">
+              <span class="label">Father:</span>
+              <span class="name">Md. Abul Basher</span>
+            </p>
+            <p class="family-member">
+              <span class="label">Mother:</span>
+              <span class="name">Marjan Begum</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Wedding Date & Time Badge (Matching Panel 7) -->
+        <div class="card-event-details">
+          <div class="event-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <time datetime="2026-10-30">Friday, 30 October 2026</time>
+          </div>
+          <span class="event-detail-divider" aria-hidden="true">|</span>
+          <div class="event-detail-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>8:00 PM</span>
+          </div>
+        </div>
+
+        <!-- 6. Venue Section (Matching Panel 8) -->
+        <div class="card-venue-section">
+          <div class="venue-header-row">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <h4 class="venue-title-label">Venue</h4>
+          </div>
+          <h3 class="venue-name">BB Convention Hall Chittagong</h3>
+          <address class="venue-address">
+            Katalganja, Panchlaish, Chittagong, beside Park View Hospital,<br>
+            Chittagong 4000
+          </address>
+        </div>
+
+        <!-- 7. With Thanks & Blessing (Matching Panel 8) -->
+        <div class="card-with-thanks-section">
+          <p class="with-thanks-label">With Thanks</p>
+          <p class="with-thanks-names">Farjana Akter &amp; Roksana Akter</p>
+
+          <div class="card-divider-flourish" aria-hidden="true">
+            <span class="divider-line"></span>
+            <svg class="divider-ornament" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <span class="divider-line"></span>
+          </div>
+
+          <p class="blessing-closing">
+            Your gracious presence and blessings will make<br>
+            this joyous occasion truly memorable.
+          </p>
+        </div>
+
+        <!-- STAGE E: Countdown & Practical Guest Actions (Matching Panel 9) -->
+        <footer class="guest-actions-wrapper">
+          <!-- Countdown Section -->
+          <div class="countdown-box" id="wedding-countdown-box">
+            <p class="countdown-title" id="countdown-heading">Time Left Until Our Wedding</p>
+            <div class="countdown-timer" aria-live="polite">
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-days">--</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-hours">--</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-minutes">--</span>
+                <span class="countdown-label">Minutes</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-number" id="cd-seconds">--</span>
+                <span class="countdown-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons Stack (Matching Panel 9) -->
+          <div class="action-buttons-stack">
+            <!-- Primary Action: Get Directions (Terracotta Pink Pill) -->
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=BB+Convention+Hall+Katalganja+Panchlaish+Chittagong" 
+              class="btn btn-directions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              title="Open Google Maps directions to BB Convention Hall Chittagong"
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Get Directions</span>
+            </a>
+
+            <!-- Action: Add to Calendar Dropdown -->
+            <div class="calendar-dropdown-wrapper" style="width: 100%;">
+              <button 
+                id="btn-calendar-trigger" 
+                class="btn btn-calendar-trigger" 
+                type="button" 
+                aria-haspopup="true" 
+                aria-expanded="true"
+                style="width: 100%;"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Add to Calendar</span>
+              </button>
+
+              <div id="calendar-menu" class="calendar-menu" role="menu">
+                <a id="btn-cal-google" class="calendar-option-btn" href="#" target="_blank" rel="noopener noreferrer" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  <span>Google Calendar</span>
+                </a>
+                <button id="btn-cal-ics" class="calendar-option-btn" type="button" role="menuitem">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  <span>Apple / Outlook (.ics)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Secondary Action: Replay the Invitation -->
+            <button id="btn-replay-invitation" class="btn btn-replay-card" type="button" title="Close window and replay the animation" style="width: 100%;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 4v6h6"></path>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              <span>Replay Invitation</span>
+            </button>
+
+            <!-- Bottom Music Toggle Row (Matching Panel 9) -->
+            <div id="bottom-music-toggle" class="music-toggle-row" role="switch" aria-checked="false" tabindex="0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13"></path>
+                <circle cx="6" cy="18" r="3"></circle>
+                <circle cx="18" cy="16" r="3"></circle>
+              </svg>
+              <span>Music</span>
+              <div class="music-toggle-switch">
+                <div class="music-toggle-knob"></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Page Footer -->
+  <footer class="app-footer">
+    <p class="footer-blessing">May Allah bless this union with eternal love &amp; happiness.</p>
+    <p>&copy; 2026 Jahid Hasan &amp; Fahmida Sultana. All rights reserved.</p>
+  </footer>
+
+  <!-- Feedback Toast Notification -->
+  <aside id="action-toast" class="action-toast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+    <span id="toast-message">Success!</span>
+  </aside>
+
+  <!-- Script Modules -->
+  <script src="js/sound.js"></script>
+  <script src="js/petals.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/window-controller.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+

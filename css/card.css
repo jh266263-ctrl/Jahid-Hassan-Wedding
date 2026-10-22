@@ -1,0 +1,550 @@
+/* ========================================================
+   Refined Wedding Invitation Card Matching Reference Visuals
+   ======================================================== */
+
+.invitation-card-container {
+  width: 100%;
+  max-width: 600px;
+  align-self: stretch;
+  margin: 0 auto;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(30px);
+  pointer-events: none;
+  transition: opacity 1s var(--ease-natural), transform 1s var(--ease-natural);
+}
+
+.invitation-card-container.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* The Cohesive Physical-Feel Wedding Card */
+.invitation-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--color-card-bg);
+  border: 1.5px solid rgba(199, 166, 106, 0.45);
+  border-radius: var(--radius-lg);
+  padding: 4rem 2.5rem 3.5rem;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Card Inset Double Gold Border */
+.card-inner-frame {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(199, 166, 106, 0.35);
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+}
+
+/* Corner Floral SVG Ornaments */
+.card-corner-floral {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+.floral-tl {
+  top: 2px;
+  left: 2px;
+  width: 88px;
+  height: 88px;
+}
+
+.floral-tr {
+  top: 2px;
+  right: 2px;
+  width: 88px;
+  height: 88px;
+}
+
+.floral-bl {
+  bottom: 2px;
+  left: 2px;
+  width: 94px;
+  height: 108px;
+}
+
+.floral-br {
+  bottom: 2px;
+  right: 2px;
+  width: 94px;
+  height: 108px;
+}
+
+/* 1. Islamic Opening */
+.card-bismillah-section {
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 5;
+}
+
+.bismillah-svg {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.bismillah-arabic {
+  margin: 0 auto 0.5rem;
+  text-align: center;
+}
+
+.bismillah-arabic-text {
+  font-family: 'Scheherazade New', 'Amiri', 'Traditional Arabic', 'Arial Unicode MS', serif;
+  font-size: 1.75rem;
+  color: var(--color-deep-brown);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  display: block;
+  direction: rtl;
+}
+
+.bismillah-calligraphy-img {
+  width: 170px;
+  height: auto;
+  max-width: 80%;
+  margin: 0 auto 0.65rem;
+  display: block;
+  mix-blend-mode: multiply;
+  filter: contrast(1.1);
+}
+
+.bismillah-transliteration {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 0.8125rem;
+  color: var(--color-deep-brown-muted);
+  letter-spacing: 0.08em;
+  margin: 0.1rem auto 0.5rem;
+  text-align: center;
+}
+
+.bismillah-translation {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--color-deep-brown-light);
+  line-height: 1.45;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* 2. Invitation Invocation */
+.card-invitation-message {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+.blessings-line {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.0625rem;
+  color: var(--color-deep-brown-light);
+  margin-bottom: 0.6rem;
+}
+
+.host-name {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--color-deep-brown);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.45rem;
+}
+
+.host-request {
+  font-family: var(--font-serif-display);
+  font-size: 1.05rem;
+  color: var(--color-deep-brown-light);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* 3. Couple Names (Matching Panel 6 Style) */
+.card-couple-section {
+  margin: 2.25rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.couple-names-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.couple-name {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-names-crimson);
+  line-height: 1.15;
+}
+
+.couple-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.4rem;
+  color: var(--color-muted-gold-dark);
+  line-height: 0.8;
+  margin: 0.15rem 0;
+}
+
+.card-divider-flourish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem auto 1.25rem;
+  max-width: 240px;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(199, 166, 106, 0.6), transparent);
+}
+
+.divider-ornament {
+  width: 14px;
+  height: 14px;
+  fill: var(--color-muted-gold);
+}
+
+/* 4. Families Details (Matching Panel 7) */
+.card-families-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  margin: 1.75rem 0 2rem;
+  text-align: center;
+  z-index: 5;
+}
+
+.card-families-grid::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 50%;
+  width: 1px;
+  background: rgba(199, 166, 106, 0.35);
+}
+
+.family-column {
+  padding: 0.5rem 1rem;
+}
+
+.family-role-title {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-deep-brown-light);
+  margin-bottom: 0.5rem;
+}
+
+.family-member {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--color-deep-brown);
+  margin-bottom: 0.35rem;
+  line-height: 1.45;
+}
+
+.family-member .label {
+  color: var(--color-deep-brown-muted);
+  font-size: 0.875rem;
+  margin-right: 0.3rem;
+}
+
+.family-member .name {
+  font-weight: 600;
+}
+
+/* 5. Date & Time Badge (Matching Panel 7) */
+.card-event-details {
+  margin: 1.75rem 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 5;
+}
+
+.event-detail-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-deep-brown);
+}
+
+.event-detail-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--color-muted-gold-dark);
+}
+
+.event-detail-divider {
+  color: rgba(199, 166, 106, 0.5);
+  font-size: 1.1rem;
+}
+
+/* 6. Venue Section (Matching Panel 8) */
+.card-venue-section {
+  margin: 2rem 0;
+  position: relative;
+  z-index: 5;
+}
+
+.venue-header-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.venue-header-row svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-muted-gold-dark);
+}
+
+.venue-title-label {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-deep-brown);
+}
+
+.venue-name {
+  font-family: var(--font-serif-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-deep-brown);
+  margin-bottom: 0.35rem;
+}
+
+.venue-address {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-deep-brown-light);
+  max-width: 440px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* 7. With Thanks & Blessing (Matching Panel 8) */
+.card-with-thanks-section {
+  margin: 2rem 0 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.with-thanks-label {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-deep-brown);
+  margin-bottom: 0.3rem;
+}
+
+.with-thanks-names {
+  font-family: var(--font-serif-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-deep-brown);
+  margin-bottom: 1rem;
+}
+
+.blessing-closing {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--color-deep-brown-muted);
+  max-width: 380px;
+  margin: 0.75rem auto 0;
+  line-height: 1.5;
+}
+
+/* ========================================================
+   Countdown & Guest Actions (Matching Panel 9)
+   ======================================================== */
+.guest-actions-wrapper {
+  margin-top: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+/* Countdown Card */
+.countdown-box {
+  margin: 0 auto 2rem;
+  width: 100%;
+  max-width: 380px;
+}
+
+.countdown-title {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-deep-brown);
+  margin-bottom: 0.85rem;
+  text-align: center;
+}
+
+.countdown-timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFDFB;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.2rem;
+  border: 1px solid rgba(199, 166, 106, 0.3);
+  box-shadow: 0 2px 6px rgba(74, 53, 47, 0.05);
+}
+
+.countdown-number {
+  font-family: var(--font-serif-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-deep-brown);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 0.75rem;
+  color: var(--color-deep-brown-muted);
+  margin-top: 0.25rem;
+}
+
+/* Action Buttons Stack (Matching Panel 9) */
+.action-buttons-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* Primary Action: Get Directions (Terracotta Pink Pill) */
+.btn-directions {
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 6px 18px rgba(181, 97, 109, 0.35);
+}
+
+.btn-directions:hover {
+  background: var(--color-terracotta-hover);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(181, 97, 109, 0.45);
+}
+
+.btn-directions svg {
+  fill: #FFFFFF;
+}
+
+/* Secondary Actions: Cream Pill with Gold Border */
+.btn-calendar-trigger,
+.btn-replay-card {
+  background: #FFFDFB;
+  color: var(--color-deep-brown);
+  border: 1.5px solid var(--color-muted-gold);
+  box-shadow: 0 2px 8px rgba(74, 53, 47, 0.06);
+}
+
+.btn-calendar-trigger:hover,
+.btn-replay-card:hover {
+  background: #FFFFFF;
+  border-color: var(--color-muted-gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(199, 166, 106, 0.22);
+}
+
+.btn-calendar-trigger svg,
+.btn-replay-card svg {
+  stroke: var(--color-muted-gold-dark);
+}
+
+/* Music Toggle Pill Switch (Matching Panel 9) */
+.music-toggle-row {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-deep-brown);
+}
+
+.music-toggle-switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: #D9C5B2;
+  border-radius: var(--radius-full);
+  transition: background var(--duration-fast) ease;
+}
+
+.music-toggle-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(74, 53, 47, 0.2);
+  transition: transform var(--duration-fast) ease;
+}
+
+.music-toggle-row.is-active .music-toggle-switch {
+  background: var(--color-terracotta);
+}
+
+.music-toggle-row.is-active .music-toggle-knob {
+  transform: translateX(20px);
+}

@@ -1,0 +1,54 @@
+:root {
+  /* Color Palette - Matching User Reference Visuals */
+  --color-warm-ivory: #FFF8F0;
+  --color-warm-ivory-light: #FDF7F0;
+  --color-warm-ivory-dark: #F5EADB;
+  --color-card-bg: #FAF4EB;
+  
+  --color-dusty-rose: #C77D87;
+  --color-dusty-rose-dark: #9E4C57;
+  --color-terracotta: #B5616D;
+  --color-terracotta-hover: #9E4C57;
+  --color-terracotta-dark: #823842;
+  --color-blush-pink: #F8DFE3;
+  --color-blush-peach: #F6D6CC;
+
+  /* Natural Sage & Gold Accents */
+  --color-soft-sage: #8DA885;
+  --color-soft-sage-light: #D9E4D6;
+  --color-muted-gold: #C7A66A;
+  --color-muted-gold-light: #E8D8B7;
+  --color-muted-gold-dark: #A68444;
+
+  /* Typography Colors */
+  --color-deep-brown: #4A352F;
+  --color-deep-brown-light: #6E534C;
+  --color-deep-brown-muted: #8E736C;
+  --color-names-crimson: #6E2D27;
+
+  /* Typography */
+  --font-serif-display: 'Cormorant Garamond', Garamond, 'Georgia', serif;
+  --font-serif-heading: 'Cinzel', 'Playfair Display', serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 18px rgba(74, 53, 47, 0.06);
+  --shadow-soft: 0 10px 28px rgba(74, 53, 47, 0.08);
+  --shadow-card: 0 16px 44px rgba(74, 53, 47, 0.1), 0 2px 8px rgba(199, 166, 106, 0.12);
+  --shadow-lantern: 0 0 24px rgba(255, 200, 100, 0.65);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-natural: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 800ms;
+  --duration-opening: 1200ms;
+}

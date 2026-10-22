@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation Details — Jahid &amp; Fahmida</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .invitation-card-container {
+      opacity: 1 !important;
+      transform: none !important;
+      pointer-events: auto !important;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="app-container">
+    <section id="invitation-card-container" class="invitation-card-container is-visible">
+      <article class="invitation-card" id="wedding-invitation-content">
+        <div class="card-inner-frame" aria-hidden="true"></div>
+        <div class="card-corner card-corner-tl" aria-hidden="true"></div>
+        <div class="card-corner card-corner-tr" aria-hidden="true"></div>
+        <div class="card-corner card-corner-bl" aria-hidden="true"></div>
+        <div class="card-corner card-corner-br" aria-hidden="true"></div>
+
+        <!-- 1. Islamic Opening -->
+        <header class="card-bismillah-section">
+          <svg class="bismillah-calligraphy-svg" viewBox="0 0 450 90" fill="currentColor" aria-hidden="true">
+            <path d="M225 15 C210 15 200 22 190 28 C180 20 170 16 160 16 C145 16 135 25 130 38 C125 32 118 28 110 28 C95 28 85 40 85 55 C85 70 100 80 118 80 C135 80 148 68 152 52 C158 64 170 72 185 72 C198 72 208 65 215 55 C222 65 232 72 245 72 C260 72 272 64 278 52 C282 68 295 80 312 80 C330 80 345 70 345 55 C345 40 335 28 320 28 C312 28 305 32 300 38 C295 25 285 16 270 16 C260 16 250 20 240 28 C230 22 220 15 225 15 Z"/>
+          </svg>
+          <p class="bismillah-transliteration">Bismillah-ir-Rahman-ir-Rahim</p>
+          <p class="bismillah-translation">In the Name of Almighty Allah, The Most Beneficent &amp; The Most Merciful</p>
+        </header>
+
+        <!-- 2. Invitation Invocation -->
+        <div class="card-invitation-message">
+          <p class="blessings-line">With the blessings of Almighty Allah,</p>
+          <h2 class="host-name">Ayesha Begum</h2>
+          <p class="host-request">requests the pleasure of your company at the wedding ceremony of her beloved son.</p>
+        </div>
+
+        <!-- 3. Couple Names -->
+        <div class="card-couple-section">
+          <div class="couple-names-wrapper">
+            <h1 class="couple-name groom-name">Jahid Hasan</h1>
+            <span class="couple-ampersand">&amp;</span>
+            <h1 class="couple-name bride-name">Fahmida Sultana</h1>
+          </div>
+          <div class="card-divider-flourish">
+            <span class="divider-line"></span>
+            <svg class="divider-ornament" viewBox="0 0 24 24"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <!-- 4. Family Details -->
+        <div class="card-families-grid">
+          <div class="family-column">
+            <h3 class="family-role-title">Groom's Family</h3>
+            <p class="family-member">
+              <span class="label">Father:</span>
+              <span class="name">Late Abdul Jalil</span>
+            </p>
+            <p class="family-member">
+              <span class="label">Mother:</span>
+              <span class="name">Ayesha Begum</span>
+            </p>
+          </div>
+
+          <div class="family-column">
+            <h3 class="family-role-title">Bride's Family</h3>
+            <p class="family-member">
+              <span class="label">Father:</span>
+              <span class="name">Abul Bashar</span>
+            </p>
+            <p class="family-member">
+              <span class="label">Mother:</span>
+              <span class="name">Marjan Begum</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Wedding Date & Time -->
+        <div class="card-event-details">
+          <div class="event-date-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <time class="event-date-text">Friday, 30 October 2026</time>
+          </div>
+          <p class="event-time-badge">8:00 PM</p>
+        </div>
+
+        <!-- Countdown -->
+        <div class="countdown-box" id="wedding-countdown-box">
+          <p class="countdown-title">Counting Down To Our Auspicious Day</p>
+          <div class="countdown-timer">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-days">08</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-hours">08</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-minutes">21</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-seconds">15</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Venue & Address -->
+        <div class="card-venue-section">
+          <p class="venue-title-label">Wedding Venue</p>
+          <h3 class="venue-name">BB Convention Hall Chittagong</h3>
+          <address class="venue-address">
+            Katalganja, Panchlaish, Chittagong, beside Park View Hospital, Chittagong 4000
+          </address>
+        </div>
+
+        <!-- 7. With Thanks -->
+        <div class="card-with-thanks-section">
+          <p class="with-thanks-label">With Thanks</p>
+          <p class="with-thanks-names">Farjana Akter &amp; Roksana Akter</p>
+        </div>
+
+        <!-- 8. Guest Actions -->
+        <footer class="guest-actions-wrapper">
+          <div class="action-buttons-row">
+            <a href="https://www.google.com/maps/search/?api=1&query=BB+Convention+Hall+Katalganja+Panchlaish+Chittagong" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+              <span>Get Directions</span>
+            </a>
+            <button class="btn btn-secondary" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Add to Calendar</span>
+            </button>
+            <button class="btn btn-replay" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"></path><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+              <span>Replay Invitation</span>
+            </button>
+          </div>
+        </footer>
+      </article>
+    </section>
+  </main>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const docW = document.documentElement.clientWidth;
+      let culprits = [];
+      document.querySelectorAll('*').forEach(el => {
+        if (el.offsetWidth > 380) {
+          culprits.push(el.tagName + (el.className ? '.' + el.className.split(' ')[0] : '') + ' (ow=' + el.offsetWidth + ')');
+        }
+      });
+      const debug = document.createElement('div');
+      debug.id = 'debug-overflow';
+      debug.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:rgba(200,0,0,0.95);color:white;font-size:11px;padding:6px;z-index:99999;word-break:break-all;';
+      debug.textContent = 'Win: ' + window.innerWidth + ' | Doc: ' + docW + ' | Over380: ' + culprits.join(' | ');
+      document.body.appendChild(debug);
+    });
+  </script>
+</body>
+</html>

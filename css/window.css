@@ -1,0 +1,523 @@
+/* ========================================================
+   Architectural Window Scene Matching Reference Visuals
+   ======================================================== */
+
+.window-scene-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  transition: all var(--duration-slow) var(--ease-natural);
+}
+
+/* Outer Lantern Container (Flanking the window) */
+.window-stage-container {
+  position: relative;
+  width: 380px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hanging Brass Lanterns */
+.lantern-wrapper {
+  position: absolute;
+  top: 15px;
+  z-index: 28;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(74, 53, 47, 0.22));
+}
+
+.lantern-left {
+  left: -18px;
+}
+
+.lantern-right {
+  right: -18px;
+}
+
+.lantern-svg {
+  width: 48px;
+  height: 112px;
+  display: block;
+}
+
+.lantern-glow {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 110, 0.95) 0%, rgba(255, 170, 50, 0.45) 50%, transparent 75%);
+  pointer-events: none;
+  animation: lanternFlicker 3s infinite alternate ease-in-out;
+}
+
+@keyframes lanternFlicker {
+  0% { opacity: 0.75; transform: translateX(-50%) scale(0.95); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+  100% { opacity: 0.85; transform: translateX(-50%) scale(1); }
+}
+
+/* The Architectural Window Frame */
+.interactive-window-container {
+  position: relative;
+  width: 290px;
+  height: 390px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--duration-normal) var(--ease-natural);
+}
+
+.interactive-window-container:hover:not(.is-open) {
+  transform: translateY(-3px) scale(1.01);
+}
+
+.interactive-window-container:focus-visible {
+  outline: 3px solid var(--color-muted-gold);
+  outline-offset: 6px;
+  border-radius: 145px 145px 12px 12px;
+}
+
+/* Outer Window Arch Frame with Moulding */
+.window-outer-arch {
+  position: absolute;
+  inset: 0;
+  border-radius: 145px 145px 12px 12px;
+  background: linear-gradient(135deg, #FFFDFB 0%, #F5ECE0 100%);
+  border: 9px solid #EFE4D6;
+  box-shadow: 
+    0 16px 40px rgba(74, 53, 47, 0.12),
+    0 2px 6px rgba(199, 166, 106, 0.2),
+    inset 0 0 0 2px rgba(199, 166, 106, 0.35);
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Window Sill */
+.window-sill {
+  position: absolute;
+  bottom: -12px;
+  left: -16px;
+  right: -16px;
+  height: 22px;
+  background: linear-gradient(180deg, #FAF4EB 0%, #DFD0BE 100%);
+  border-radius: 8px;
+  box-shadow: 
+    0 10px 22px rgba(74, 53, 47, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  z-index: 22;
+  border-bottom: 2px solid #C4B29B;
+}
+
+/* Window Garland Archway (Lush Eucalyptus & Peach Roses) */
+.window-garland {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 330px;
+  height: 95px;
+  z-index: 25;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 10px rgba(74, 53, 47, 0.12));
+}
+
+/* Side Floral Climbing Vines */
+.window-side-vines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 24;
+}
+
+/* Inner Window Niche: Couple Revealed Behind */
+.window-interior {
+  position: absolute;
+  inset: 0;
+  border-radius: 136px 136px 8px 8px;
+  background: radial-gradient(circle at 50% 30%, #FFF5E3 0%, #FDE4CD 55%, #E5CFBC 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Couple Illustration in Niche */
+.couple-reveal-view {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  pointer-events: auto;
+  cursor: pointer;
+  transform-origin: center bottom;
+  animation: coupleIdleBreathing 4.5s infinite ease-in-out;
+  transition: transform var(--duration-fast) var(--ease-natural);
+}
+
+.couple-reveal-view:hover {
+  transform: scale(1.03);
+}
+
+@keyframes coupleIdleBreathing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Interactive Blinking Overlay */
+.couple-blink-overlay {
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.blink-eye {
+  position: absolute;
+  background: #2E2320;
+  border-radius: 50%;
+  animation: blinkEyelid 4s infinite ease-in-out;
+}
+
+/* Groom Eyes Overlay */
+.groom-eye-left { top: 12px; left: 32px; width: 8px; height: 10px; }
+.groom-eye-right { top: 12px; left: 54px; width: 8px; height: 10px; }
+
+/* Bride Eyes Overlay */
+.bride-eye-left { top: 15px; left: 88px; width: 8px; height: 10px; }
+.bride-eye-right { top: 15px; left: 110px; width: 8px; height: 10px; }
+
+@keyframes blinkEyelid {
+  0%, 93%, 97%, 100% { transform: scaleY(1); opacity: 0; }
+  95% { transform: scaleY(0.1); opacity: 0.9; }
+}
+
+/* Little Heart Float */
+.couple-heart-float {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  fill: #E86575;
+  animation: heartFloatPulse 3s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes heartFloatPulse {
+  0%, 100% { transform: translateX(-50%) translateY(0) scale(0.9); opacity: 0.8; }
+  50% { transform: translateX(-50%) translateY(-6px) scale(1.15); opacity: 1; }
+}
+
+/* Soft Curtains on Window Sides */
+.curtains-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 136px 136px 8px 8px;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.25, 1), opacity 0.8s ease;
+}
+
+.curtain-left {
+  left: 0;
+  transform-origin: 0% 0%;
+}
+
+.curtain-right {
+  right: 0;
+  transform-origin: 100% 0%;
+}
+
+.interactive-window-container.is-open .curtain-left {
+  transform: translateX(-65%) scaleX(0.5);
+  opacity: 0.75;
+}
+
+.interactive-window-container.is-open .curtain-right {
+  transform: translateX(65%) scaleX(0.5);
+  opacity: 0.75;
+}
+
+/* 3D Shutters */
+.shutters-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  display: flex;
+  border-radius: 136px 136px 8px 8px;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.shutter {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform var(--duration-opening) cubic-bezier(0.3, 0.05, 0.1, 1), 
+              box-shadow var(--duration-opening) ease;
+  will-change: transform;
+}
+
+.shutter-left {
+  transform-origin: left center;
+  border-top-left-radius: 136px;
+  border-bottom-left-radius: 8px;
+}
+
+.shutter-right {
+  transform-origin: right center;
+  border-top-right-radius: 136px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Shutter Faces */
+.shutter-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shutter-front {
+  background-color: #FAF4EB;
+  border: 3.5px solid #DFCDBD;
+  box-shadow: inset 0 0 10px rgba(74, 53, 47, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.shutter-left .shutter-front {
+  border-top-left-radius: 136px;
+  border-bottom-left-radius: 8px;
+  border-right: 2px solid #CBBBA6;
+  background-image: url('../assets/shutter_louver_left.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.shutter-right .shutter-front {
+  border-top-right-radius: 136px;
+  border-bottom-right-radius: 8px;
+  border-left: 2px solid #CBBBA6;
+  background-image: url('../assets/shutter_louver_right.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Louvered Texture on Shutters */
+.shutter-louvers {
+  position: absolute;
+  top: 42px;
+  bottom: 18px;
+  left: 10px;
+  right: 10px;
+  background-image: repeating-linear-gradient(
+    180deg,
+    #FAF3E8 0px,
+    #FAF3E8 7px,
+    #E8D9C5 8px,
+    #D0BDA6 10px
+  );
+  border: 2px solid rgba(199, 166, 106, 0.4);
+  border-radius: 6px;
+  box-shadow: inset 0 2px 4px rgba(74, 53, 47, 0.08);
+}
+
+.shutter-left .shutter-louvers {
+  border-top-left-radius: 70px;
+}
+
+.shutter-right .shutter-louvers {
+  border-top-right-radius: 70px;
+}
+
+/* Golden Vertical Bar Handles */
+.shutter-handle-bar {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 48px;
+  background: linear-gradient(180deg, #F3DEAB 0%, #C7A66A 50%, #947539 100%);
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(74, 53, 47, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  z-index: 20;
+}
+
+.shutter-left .shutter-handle-bar {
+  right: 6px;
+}
+
+.shutter-right .shutter-handle-bar {
+  left: 6px;
+}
+
+/* Shutter Back */
+.shutter-back {
+  background: linear-gradient(135deg, #EDE0CE 0%, #DFCFBB 100%);
+  transform: rotateY(180deg);
+  border: 3.5px solid #C8B7A2;
+}
+
+.shutter-left .shutter-back {
+  border-top-right-radius: 136px;
+  border-bottom-right-radius: 8px;
+}
+
+.shutter-right .shutter-back {
+  border-top-left-radius: 136px;
+  border-bottom-left-radius: 8px;
+}
+
+/* 3D Open State */
+.interactive-window-container.is-open .shutter-left {
+  transform: perspective(1200px) rotateY(-112deg);
+  box-shadow: -10px 14px 26px rgba(74, 53, 47, 0.22);
+  pointer-events: none;
+}
+
+.interactive-window-container.is-open .shutter-right {
+  transform: perspective(1200px) rotateY(112deg);
+  box-shadow: 10px 14px 26px rgba(74, 53, 47, 0.22);
+  pointer-events: none;
+}
+
+/* First Impression Prompt Text & Button (Stage A) */
+.window-prompt-container {
+  text-align: center;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  transition: opacity var(--duration-normal) ease, transform var(--duration-normal) ease;
+}
+
+.window-subheading {
+  font-family: var(--font-serif-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-deep-brown);
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Dusty Rose Pill Button matching Panel 1 */
+.btn-open-invitation {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 0.85rem 2.25rem;
+  font-family: var(--font-serif-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 
+    0 8px 22px rgba(181, 97, 109, 0.38),
+    0 2px 6px rgba(74, 53, 47, 0.12);
+  transition: all var(--duration-fast) var(--ease-natural);
+  min-height: 48px;
+  min-width: 220px;
+}
+
+.btn-open-invitation:hover {
+  background: var(--color-terracotta-hover);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 28px rgba(181, 97, 109, 0.48),
+    0 4px 10px rgba(74, 53, 47, 0.15);
+}
+
+.btn-open-invitation:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-open-invitation:focus-visible {
+  outline: 3px solid var(--color-muted-gold);
+  outline-offset: 3px;
+}
+
+.btn-open-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform var(--duration-fast) ease;
+}
+
+.btn-open-invitation:hover .btn-open-arrow {
+  transform: translateX(4px);
+}
+
+/* Delicate Gold Filigree Beneath Button */
+.flourish-below-button {
+  margin: 0.85rem auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: 180px;
+}
+
+.flourish-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C7A66A, transparent);
+}
+
+.flourish-icon {
+  width: 14px;
+  height: 14px;
+  fill: #C7A66A;
+}
+
+/* Hide Open Controls once open */
+.window-scene-wrapper.is-revealed .window-prompt-container {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  position: absolute;
+  visibility: hidden;
+}
